@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+
+<title>For My Dino 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 25px 15px;
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #71334e;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #ffdce9,
+    #fff5f8
+  );
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 750px;
+  margin: auto;
+}
+
+.topline {
+  display: inline-block;
+  padding: 9px 17px;
+  border-radius: 30px;
+  background: white;
+  color: #d6336c;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: #e83e7b;
+  font-size: clamp(40px, 9vw, 65px);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #94516c;
+}
+
+/* PHOTO GALLERY */
+
+.gallery-section {
+  margin: 45px 0;
+}
+
+.gallery-section h2 {
+  color: #dc3674;
+  font-size: 32px;
+}
+
+.gallery-section > p {
+  color: #a45c79;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.gallery-item {
+  background: white;
+  padding: 9px;
+  border-radius: 18px;
+  box-shadow: 0 7px 20px #d65b8025;
+  transition: transform .3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) rotate(-1deg);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.gallery-item p {
+  margin: 12px 3px 5px;
+  color: #d6336c;
+  font-size: 14px;
+}
+
+/* LOVE LETTER */
+
+.message {
+  background: #ffffffd9;
+  border-radius: 22px;
+  padding: 25px;
+  line-height: 1.9;
+  font-size: 17px;
+  box-shadow: 0 8px 25px #d65b8020;
+  margin: 35px 0;
+  text-align: left;
+}
+
+.message p {
+  margin-bottom: 15px;
+}
+
+.message p:last-child {
+  margin-bottom: 0;
+}
+
+/* PROPOSAL */
+
+.question {
+  color: #dc3674;
+  font-size: clamp(27px, 7vw, 42px);
+  line-height: 1.4;
+  margin-top: 45px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 35px auto;
+  min-height: 75px;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  padding: 16px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  touch-action: manipulation;
+}
+
+#yes {
+  background: linear-gradient(135deg, #ff80aa, #e83e7b);
+  color: white;
+  box-shadow: 0 8px 25px #e83e7b55;
+  z-index: 2;
+}
+
+#yes:hover {
+  transform: scale(1.08);
+}
+
+#no {
+  background: #aaa;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+/* YES RESPONSE */
+
+#answer {
+  display: none;
+  background: white;
+  border-radius: 22px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px #d65b8030;
+  animation: appear .5s ease;
+}
+
+#answer h2 {
+  color: #e83e7b;
+  font-size: 32px;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  animation: float 4s linear forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 420px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .gallery {
+    gap: 10px;
+  }
+
+  .gallery-item {
+    padding: 7px;
+  }
+
+  .gallery-item p {
+    font-size: 12px;
+  }
+
+  .message {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 15px 24px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<!-- INTRODUCTION -->
+
+<div class="topline">
+A LITTLE SURPRISE FOR MY FAVOURITE GIRL
+</div>
+
+<h1>Hey, My Dino! 🦖💗</h1>
+
+<p class="subtitle">
+I have something special to ask you,
+my pretty girl. So take a little moment
+for me. 🥹
+</p>
+
+
+<!-- SIX PICTURE GALLERY -->
+
+<section class="gallery-section">
+
+<h2>Our Little World 💗</h2>
+
+<p>
+Six pictures, countless memories,
+one favourite person.
+</p>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="us.jpeg" alt="Our memory 1">
+<p>My favourite person ❤️</p>
+</div>
+
+<div class="gallery-item">
+<img src="us2.jpeg" alt="Our memory 2">
+<p>Your smile, my happiness 🌸</p>
+</div>
+
+<div class="gallery-item">
+<img src="us3.jpeg" alt="Our memory 3">
+<p>My favourite moments 🥹</p>
+</div>
+
+<div class="gallery-item">
+<img src="us4.jpeg" alt="Our memory 4">
+<p>Us, being us 💕</p>
+</div>
+
+<div class="gallery-item">
+<img src="us5.jpeg" alt="Our memory 5">
+<p>My pretty girl 💗</p>
+</div>
+
+<div class="gallery-item">
+<img src="us6.jpeg" alt="Our memory 6">
+<p>More memories to come ✨</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- LOVE LETTER -->
+
+<div class="message">
+
+<p><b>My dearest Zeriin Subha,</b></p>
+
+<p>
+You have no idea how happy you make me.
+Your smile, your little habits, your silly
+moments and even the way you annoy me
+are things I never want to lose.
+</p>
+
+<p>
+I want to be the person who makes you
+feel loved, appreciated and beautiful
+every single day.
+</p>
+
+<p>
+I want to spoil you with love, collect
+a thousand memories with you, laugh
+with you, grow with you and hold your
+hand through every chapter of life.
+</p>
+
+<p>
+I cannot promise a perfect love story,
+but I promise to keep choosing you.
+Again and again.
+</p>
+
+<p>
+And now, my love, I have one question...
+</p>
+
+</div>
+
+
+<!-- THE PROPOSAL -->
+
+<h2 class="question">
+
+Zeriin Subha,<br>
+
+Will you be my forever Valentine? 💍
+
+</h2>
+
+
+<!-- BUTTONS -->
+
+<div class="buttons">
+
+<button id="yes" onclick="sayYes()">
+YES, MY LOVE! 💖
+</button>
+
+<button id="no" type="button">
+NO 🙈
+</button>
+
+</div>
+
+<p id="tease">
+Hehe, try pressing NO if you can! 😂
+</p>
+
+
+<!-- AFTER YES -->
+
+<div id="answer">
+
+<h2>YAAAAAY! 🥹💗</h2>
+
+<p>
+You just made me the happiest person
+in the world, my Dino!
+</p>
+
+<p>
+I LOVE YOU SO MUCH! 💗🦖
+</p>
+
+<p>
+Here's to us, today, tomorrow
+and forever. ❤️
+</p>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<p style="margin-top:45px; color:#a45c79;">
+Made with all my love, just for you. ♡
+</p>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const noButton = document.getElementById("no");
+
+function runAway() {
+
+  const margin = 15;
+
+  const maxX =
+    window.innerWidth - noButton.offsetWidth - margin;
+
+  const maxY =
+    window.innerHeight - noButton.offsetHeight - margin;
+
+  const x =
+    margin + Math.random() * Math.max(0, maxX - margin);
+
+  const y =
+    margin + Math.random() * Math.max(0, maxY - margin);
+
+  noButton.style.position = "fixed";
+  noButton.style.left = x + "px";
+  noButton.style.top = y + "px";
+
+}
+
+// Desktop: run away when mouse approaches
+noButton.addEventListener("pointerenter", runAway);
+
+// Mobile: run away when touched
+noButton.addEventListener("touchstart", function(e) {
+  e.preventDefault();
+  runAway();
+}, { passive: false });
+
+// Extra protection
+noButton.addEventListener("click", runAway);
+
+
+// WHEN SHE CLICKS YES
+
+function sayYes() {
+
+  document.getElementById("answer").style.display = "block";
+
+  document.getElementById("tease").innerHTML =
+    "I KNEW IT! YOU LOVE ME! 🥹💗";
+
+  document.getElementById("yes").innerHTML =
+    "I LOVE YOU, MY DINO! 💗";
+
+  document.getElementById("yes").disabled = true;
+
+  noButton.style.display = "none";
+
+  // Create floating hearts
+
+  for (let i = 0; i < 50; i++) {
+
+    setTimeout(() => {
+
+      const heart = document.createElement("div");
+
+      heart.className = "heart";
+
+      heart.innerHTML = [
+        "💗",
+        "💕",
+        "❤️",
+        "✨",
+        "💖"
+      ][Math.floor(Math.random() * 5)];
+
+      heart.style.left = Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (20 + Math.random() * 20) + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+
+    }, i * 80);
+
+  }
+
+  document.getElementById("answer").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+</script>
+
+</body>
+</html>
